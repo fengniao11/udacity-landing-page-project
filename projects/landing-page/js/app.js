@@ -22,7 +22,7 @@
  * Define Global Variables
  * 
 */
-
+navbar_content = ['section 1', 'section 2', "section 3"]
 
 /**
  * End Global Variables
@@ -39,6 +39,13 @@
 */
 
 // build the nav
+for (navlink in navbar_content){
+    var navbar = document.getElementById("navbar__list");
+    var listItem = document.createElement('li');
+    listItem.textContent = navbar_content[navlink];
+    listItem.setAttribute('class', 'menu__link');
+    navbar.appendChild(listItem);
+}
 
 
 // Add class 'active' to section when near top of viewport
